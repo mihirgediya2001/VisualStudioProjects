@@ -13,20 +13,20 @@ namespace grid
         {
             if (!IsPostBack)
             {
-                MultiView1.SetActiveView(View1);
+                MultiView1.SetActiveView(View2);
 
             }
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MultiView1.SetActiveView(View2);
-
+            //Response.Write(GridView1.SelectedRow.Cells[2].Text);
+              MultiView1.SetActiveView(View1);
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            MultiView1.SetActiveView(View1);
+            MultiView1.SetActiveView(View2);
         }
     }
 }

@@ -16,6 +16,54 @@ namespace FileUpload
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            if (FileUpload1.HasFile)
+            {
+                if (FileUpload1.PostedFile.ContentType == "image/jpeg" || FileUpload1.PostedFile.ContentType == "image/png")
+                {
+
+                    if (FileUpload1.PostedFile.ContentLength <= 300000)
+                    {
+                        String url = "C:\\Users\\HP\\source\\repos\\FileUpload\\images\\" + FileUpload1.FileName.ToString();
+                        FileUpload1.PostedFile.SaveAs(url);
+                        HyperLink l = new HyperLink();
+                        l.Text = "File Uploaded Successfully. :)";
+                        l.ForeColor = System.Drawing.Color.Green;
+                        PlaceHolder1.Controls.Add(l);
+                        Image1.ImageUrl = "~\\images\\" + FileUpload1.FileName.ToString();
+                        Image1.Height = Unit.Pixel(400);
+
+                        HyperLink l2 = new HyperLink();
+                        l2.Text = "Your Selected Picture:";
+                        PlaceHolder2.Controls.Add(l2);
+                    }
+                    else
+                    {
+                        HyperLink l = new HyperLink();
+                        l.Text = "Size of file should be less than 300000";
+                        l.ForeColor = System.Drawing.Color.Red;
+                        PlaceHolder1.Controls.Add(l);
+                    }
+                }
+                else
+                {
+                    HyperLink l = new HyperLink();
+                    l.Text = "File must have extension .jpeg and .png only.";
+                    l.ForeColor = System.Drawing.Color.Red;
+                    PlaceHolder1.Controls.Add(l);
+                }
+            }
+            else
+            {
+                HyperLink l = new HyperLink();
+                l.Text = "Please select a file.";
+                l.ForeColor = System.Drawing.Color.Red;
+                PlaceHolder1.Controls.Add(l);
+            }
+        }
+
+        /*
+         protected void Button1_Click(object sender, EventArgs e)
+        {
             //application/pdf  image/jpeg  text/plain
 
             if (FileUpload1.HasFile)
@@ -46,5 +94,6 @@ namespace FileUpload
             // FileUpload1.PostedFile.SaveAs("E:\\odd 2021 wt\\secondsessional\\images\\first.jpeg");
 
         }
+         */
     }
 }

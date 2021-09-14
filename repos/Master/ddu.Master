@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ddu.master.cs" Inherits="Master.ddu" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 682px;
+            height: 339px;
+            border: 1px solid black;
+        }
+        td {
+            border: 1px solid black;
+        }
+        .auto-style2 {
+            width: 98px;
+            height: 202px;
+            text-align: center;
+        }
+        .auto-style4 {
+            width: 264px;
+            height: 42px;
+        }
+        .auto-style6 {
+            width: 699px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style7">
+            <table class="auto-style1">
+                <tr><td colspan="2" class="auto-style4">
+                    <h2 class="auto-style6"><strong>Dharmsinh Desai University</strong></h2>
+                    </td></tr>
+                <tr>
+                    <td class="auto-style2">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/it.aspx">IT</asp:HyperLink>
+                        <br />
+                        <br />
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ce.aspx">CE</asp:HyperLink>
+                        <br />
+                        <br />
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/it.aspx">EC</asp:HyperLink>
+                    </td>
+                    <td class="auto-style5" style="padding-left:20px;">
+                        <div class="auto-style7">
+                        Faculty List:
+                        <br />
+                        <br />
+                        </div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                         
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr> 
+                    <td colspan="2" >DDU, near Canal, College Road, nadiad</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

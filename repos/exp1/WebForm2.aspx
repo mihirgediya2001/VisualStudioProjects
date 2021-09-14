@@ -25,7 +25,7 @@
             <h2 class="auto-style1">Your Form has been Submitted Successfully :)</h2>
             <h3 class="auto-style1">Click On Button to view your details.</h3>
         </div>
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" BackColor="Black" ForeColor="WhiteSmoke" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Show Data" BackColor="Black" ForeColor="WhiteSmoke" />
             <br />
             <br />
         </div>

@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DDUMaster.master.cs" Inherits="MasterPage.DDUMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 693px;
+            height: 435px;
+        }
+        .auto-style2 {
+            width: 185px;
+            text-align: center;
+        }
+        .auto-style3 {
+            text-align: center;
+            font-size: large;
+        }
+        .auto-style4 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            
+            <table class="auto-style1">
+                <tr><td colspan="2" class="auto-style4">
+                    <h2><strong>Dharmsinh Desai University</strong></h2>
+                    </td></tr>
+                <tr>
+                    <td class="auto-style2">
+                        <asp:HyperLink ID="HyperLink1" runat="server">IT</asp:HyperLink>
+                        <br />
+                        <br />
+                        <asp:HyperLink ID="HyperLink2" runat="server">CE</asp:HyperLink>
+                        <br />
+                        <br />
+                        <asp:HyperLink ID="HyperLink3" runat="server">EC</asp:HyperLink>
+                    </td>
+                    <td>
+                        Faculty List:
+                        <br />
+                        <br />
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr> 
+                    <td colspan="2" class="auto-style3">DDU, near canal, college road, nadiad</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

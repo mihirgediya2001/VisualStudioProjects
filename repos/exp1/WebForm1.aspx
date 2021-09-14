@@ -47,6 +47,14 @@
             text-align: center;
         }
 
+        .auto-style13 {
+            font-size: medium;
+        }
+        .auto-style14 {
+            width: 335px;
+            height: 48px;
+        }
+
     </style>
 </head>
 <body bgcolor="#e0e0e0">
@@ -58,51 +66,67 @@
 
             <table class="auto-style4" style="margin: auto">
                 <tr>
-                    <td class="auto-style5">First Name:</td>
+                    <td class="auto-style5">First Name:<br />
+                    </td>
                     <td class="auto-style8">
                         <asp:TextBox
                             ID="Fname"
                             runat="server"></asp:TextBox>
+                        <br />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Fname" CssClass="auto-style13" ErrorMessage="Please Enter First Name." ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">Middle Name:<br />
+                        <br />
                     </td>
                     <td class="auto-style8">
                         <asp:TextBox
                             ID="MName"
                             runat="server"></asp:TextBox>
+                        <br />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="MName" CssClass="auto-style13" ErrorMessage="Please Enter Middle name." ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">Last Name:<br />
+                        <br />
                     </td>
                     <td class="auto-style8">
                         <asp:TextBox
                             ID="LName"
                             runat="server"></asp:TextBox>
+                        <br />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="LName" CssClass="auto-style13" ErrorMessage="Please Enter Last name." ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">Email Address:<br />
+                        <br />
                     </td>
-                    <td class="auto-style8">
+                    <td class="auto-style14">
                         <asp:TextBox
                             ID="Email"
                             runat="server"></asp:TextBox>
+                        <br />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Email" ErrorMessage="Please Provide Valid Email Address." ForeColor="#FF3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">Contact Number:<br />
+                        <br />
                     </td>
-                    <td class="auto-style8">
+                    <td class="auto-style14">
                         <asp:TextBox
                             ID="Contact"
                             runat="server"></asp:TextBox>
+                        <br />
+                        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="Contact" ErrorMessage="Please Provide 10 digit Mobile Number." ForeColor="#FF3300" MaximumValue="9999999999" MinimumValue="1000000001" Type="Double"></asp:RangeValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">Gender:<br />
+                        <br />
                     </td>
                     <td class="auto-style8">
                         <asp:DropDownList ID="Gender" runat="server" Height="22px" Width="165px">
@@ -110,24 +134,32 @@
                             <asp:ListItem>Male</asp:ListItem>
                             <asp:ListItem>Female</asp:ListItem>
                         </asp:DropDownList>
+                        <br />
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="Gender" ErrorMessage="Please Select Gender." ForeColor="#FF3300" Operator="NotEqual" ValueToCompare="Select"></asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">City:<br />
+                        <br />
                     </td>
                     <td class="auto-style8">
                         <asp:TextBox
                             ID="City"
                             runat="server"></asp:TextBox>
+                        <br />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="City" ErrorMessage="Please Enter City Name." ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">Pin Code:<br />
+                        <br />
                     </td>
                     <td class="auto-style8">
                         <asp:TextBox
                             ID="PinCode"
                             runat="server"></asp:TextBox>
+                        <br />
+                        <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="PinCode" ErrorMessage="Pincode must have 6 digits." ForeColor="#FF3300" MaximumValue="999999" MinimumValue="100000" Type="Integer"></asp:RangeValidator>
                     </td>
                 </tr>
                 <tr>
@@ -135,20 +167,22 @@
                     </td>
                     <td class="auto-style8">
                         <asp:DropDownList ID="Country" runat="server" Height="22px" Width="165px">
-                            <asp:ListItem Value="Select ">Select Country</asp:ListItem>
+                            <asp:ListItem Value="Select">Select Country</asp:ListItem>
                             <asp:ListItem>India</asp:ListItem>
                             <asp:ListItem>USA</asp:ListItem>
                             <asp:ListItem>Canada</asp:ListItem>
                             <asp:ListItem>Japan</asp:ListItem>
                         </asp:DropDownList>
+                        <br />
+                        <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="Country" ErrorMessage="Please Select Country." ForeColor="#FF3300" Operator="NotEqual" ValueToCompare="Select"></asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style5">Marital Status:</td>
+                    <td class="auto-style5">Marital Status:<br />
+                    </td>
                     <td class="auto-style10">
                         <div class="auto-style9">
-                            &nbsp;<br />
-&nbsp;<br />
+                            <br />
 &nbsp;&nbsp;
                             <asp:RadioButton ID="Married" runat="server" Text="Married" />
                             &nbsp;&nbsp;&nbsp;
@@ -160,14 +194,12 @@
                             <asp:RadioButton ID="Divorced" runat="server" Text="divorced" />
                             &nbsp;&nbsp;&nbsp;
                             &nbsp;<asp:RadioButton ID="Widow" runat="server" Text="Widow" />
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                            <br />
-                            <br />
-                        </div>
+                        &nbsp;&nbsp;</div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style5">Hobbies:</td>
+                    <td class="auto-style5">Hobbies:<br />
+                    </td>
                     <td class="auto-style8">&nbsp;<asp:Panel ID="Panel1" runat="server">
                         <br />
                         &nbsp;
@@ -213,7 +245,7 @@
                         <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
                         <br />
                         <br />
-                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" BackColor="Black" ForeColor="WhiteSmoke" Width="104px" Style="border-radius: 5%" />
+                        <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" BackColor="Black" ForeColor="WhiteSmoke" Width="104px" Style="border-radius: 5%" />
                         <br />
 
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>

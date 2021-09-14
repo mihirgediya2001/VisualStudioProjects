@@ -25,35 +25,35 @@ namespace exp1
                 Label l = new Label();
                 l.Text = "Please Fill all fields.";
                 l.ForeColor = System.Drawing.Color.Red;
-                PlaceHolder1.Controls.Add(l);
+                //PlaceHolder1.Controls.Add(l);
             }
             else if (Gender.SelectedIndex == 0)
             {
                 Label l = new Label();
                 l.Text = "Please select gender.";
                 l.ForeColor = System.Drawing.Color.Red;
-                PlaceHolder1.Controls.Add(l);
+               // PlaceHolder1.Controls.Add(l);
             }
             else if (Country.SelectedIndex == 0)
             {
                 Label l = new Label();
                 l.Text = "Please select country.";
                 l.ForeColor = System.Drawing.Color.Red;
-                PlaceHolder1.Controls.Add(l);
+               // PlaceHolder1.Controls.Add(l);
             }
             else if (Contact.Text.Length != 10)
             {
                 Label l = new Label();
                 l.Text = "Contact number must have 10 digits.";
                 l.ForeColor = System.Drawing.Color.Red;
-                PlaceHolder1.Controls.Add(l);
+             //   PlaceHolder1.Controls.Add(l);
             }
             else if (PinCode.Text.Length != 6)
             {
                 Label l = new Label();
-                l.Text = "Contact number must have 6 digits.";
+                l.Text = "Pincode must have 6 digits.";
                 l.ForeColor = System.Drawing.Color.Red;
-                PlaceHolder1.Controls.Add(l);
+              //  PlaceHolder1.Controls.Add(l);
             }
             else if (!(Married.Checked || Unmarried.Checked || Divorced.Checked || Widow.Checked))
             {
@@ -86,7 +86,7 @@ namespace exp1
             else if (Calendar1.SelectedDate < date18)
             {
                 Label l = new Label();
-                l.Text = "Maximum  age must be 18.";
+                l.Text = "Maximum age must be 18.";
                 l.ForeColor = System.Drawing.Color.Red;
                 PlaceHolder1.Controls.Add(l);
             }
