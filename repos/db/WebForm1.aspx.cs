@@ -39,7 +39,7 @@ namespace db
 
 
                 if (ds.Tables["T1"].Rows.Count > 0)
-                    TextBox2.Text = ds.Tables["T1"].Rows[0][1].ToString();
+                    TextBox2.Text = ds.Tables["T1"].Rows[0][2].ToString();
 
                 Session["data"] = ds;
             }
