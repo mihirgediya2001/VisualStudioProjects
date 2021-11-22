@@ -37,4 +37,5 @@
 14. sessionCookies = s1, s2, s3 session
 
 <===== s3 =====>
+
 15. Chat = chat application using Application
