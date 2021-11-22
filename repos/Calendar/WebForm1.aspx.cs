@@ -71,7 +71,7 @@ namespace Calendar
             {
                 e.Day.IsSelectable = false;
                 HyperLink l = new HyperLink();
-                l.NavigateUrl = "~/WebForm1.aspx";
+                l.NavigateUrl = "~/WebForm2.aspx";
                 l.Text = "result";
                 e.Cell.Controls.Add(l);
 
