@@ -26,10 +26,12 @@
 
 9. FileUpload = file upload
 
-10. grid => grid view, details view and multi view.
+10. grid = grid view, details view and multi view.
 
-11. TreeView => Tree View with xml file
+11. TreeView = Tree View with xml file
 
-12. SidePath => SiteMap
+12. SidePath = SiteMap
 
-13. Wizard =>
+13. Wizard = wizard and multi view
+
+14. sessionCookies = s1, s2, s3 session
