@@ -28,9 +28,9 @@
 
 10. grid = grid view, details view and multi view.
 
-11. TreeView = Tree View with xml file
+11. TreeView = Tree View with xml file (Navigation)
 
-12. SidePath = SiteMap
+12. SidePath = SiteMap (Navigation)
 
 13. Wizard = wizard and multi view
 
